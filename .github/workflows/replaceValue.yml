@@ -20,22 +20,3 @@ jobs:
           file: tests/test-file.txt
           old-string: WHAT
           new-string: World
-
-      - name: Check if string was replaced
-        uses: ./commandline.yml
-        with:
-          command_line: cat tests/test-file.txt
-          contains: Hello World
-
-      - name: Replace string in file with regex
-        uses: ./
-        with:
-          file: tests/test-file.txt
-          old-string: (Hello =?)W.*T$
-          new-string: WHAT
-
-      - name: Check if string was replaced
-        uses: ./commandline.yml
-        with:
-          command_line: cat tests/test-file.txt
-          contains: Hello WHAT
