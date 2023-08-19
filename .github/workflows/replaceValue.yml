@@ -15,8 +15,9 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: Replace string in file
-        uses: MathieuSoysal/replace-string-in-file@v1.0.0
+        uses: jacobtomlinson/gha-find-replace@v2
         with:
-          file: ./tests/test-file.txt
-          old-string: WHAT
-          new-string: World
+          find: "WHAT"
+          replace: "World"
+          regex: false
+          include: ./tests/test-file.txt
