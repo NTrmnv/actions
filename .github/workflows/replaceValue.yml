@@ -17,6 +17,6 @@ jobs:
       - name: Replace string in file
         uses: ./
         with:
-          file: tests/test-file.txt
+          file: ./tests/test-file.txt
           old-string: WHAT
           new-string: World
